@@ -1,0 +1,36 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine</title>
+    <script src="{% static 'js/machine_filter.js' %}" defer></script>
+</head>
+<body>
+    <h1>Machines</h1>
+    <p>filters: </p>
+<label for="product_type">Product Type</label>
+
+<select name="product_type" id="product_type">
+    <option value="---">---</option>
+    <option id='large' value="large_machine">Large</option>
+    <option id='small' value="small_machine">Small</option>
+    <option id='espresso' value="espresso">Espresso</option>
+</select>
+
+<label for="water_line_compitable">water_line_compitable</label>
+<select name="water_line_compitable" id="water_line_compitable">
+    <option value="---">---</option>
+    <option value="true">True</option>
+    <option value="false">False</option>
+</select>
+
+<input type="submit" value="Apply filters" id='apply_filters'>
+
+
+<div id='json_data'>
+
+</div>
+</body>
+</html>
