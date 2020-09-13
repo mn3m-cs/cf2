@@ -13,7 +13,6 @@ class MachineList(generics.ListAPIView):
     filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
     filterset_fields = ['product_type', 'water_line_compitable']
 
-
 class PodList(generics.ListAPIView):
     queryset = models.Pod.objects.all()
     serializer_class = PodSerializer

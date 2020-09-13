@@ -17,7 +17,6 @@ class Machine(models.Model):
     def __str__(self):
         return self.name
 
-
 class Pod(models.Model):
     name = models.CharField(max_length=5)
     product_type = models.CharField(max_length=64,choices=[
