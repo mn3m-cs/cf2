@@ -20,9 +20,5 @@ class PodList(generics.ListAPIView):
     filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
     filterset_fields = ['product_type', 'flavor','pack_size']
 
-    def filter_queryset(self, queryset):
-        for backend in list(self.filter_backends):
-            queryset = backend().filter_queryset(self.request, queryset, self)
-        return queryset
 
 

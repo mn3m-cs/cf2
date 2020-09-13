@@ -7,7 +7,6 @@ class Machine(models.Model):
         ('small_machine','Coffee Machine Small'),
         ('espresso','Espresso Machine'),
     ])
-
     water_line_compitable = models.BooleanField(blank=True)
     model = models.CharField(max_length=64,choices = [
         ('base_model','base model'),
@@ -33,7 +32,6 @@ class Pod(models.Model):
         ('mocha','Mocha'),
         ('hazelnut','Hazelnut'),
     ])
-
     pack_size = models.CharField(max_length=64,choices=[
         ('1_dozen','1 dozen (12)'),
         ('3_dozen','3 dozen (36)'),
