@@ -4,13 +4,14 @@ apply.addEventListener('click',applyFilters);
 function applyFilters(){
     const product_type = document.getElementById('product_type').value.toString();
     const water_line_compitable = document.getElementById('water_line_compitable').value.toString();
-    base = 'http://127.0.0.1:8000/machines_api.json?';
+    
+    url = 'http://127.0.0.1:8000/machines_api.json?';
 
     if (product_type != "---"){
-       var url =`${base}&product_type=${product_type}`;
+       url = `${url}&product_type=${product_type}`;
     }
     if (water_line_compitable != "---"){
-        var url =`${url}&water_line_compitable=${water_line_compitable}`;
+        url = `${url}&water_line_compitable=${water_line_compitable}`;
     }
 
     console.log(url);

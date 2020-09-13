@@ -6,18 +6,18 @@ function applyFilters(){
     const flavor = document.getElementById('flavor').value.toString();
     const pack_size = document.getElementById('pack_size').value.toString();
 
-    let base = 'http://127.0.0.1:8000/pods_api.json?';
+    url = 'http://127.0.0.1:8000/pods_api.json?';
 
     if (product_type != "---"){
-       var url =`${base}&product_type=${product_type}`;
+        url =`${url}&product_type=${product_type}`;
     }
 
     if (flavor != "---"){
-        var url =`${url}&flavor=${flavor}`;
+        url =`${url}&flavor=${flavor}`;
      }
 
      if (pack_size != "---"){
-        var url =`${url}&pack_size=${pack_size}`;
+        url =`${url}&pack_size=${pack_size}`;
      }
      console.log(url);
      fetch(url).then(onResponse).then(onJsonReady).catch(onError);
